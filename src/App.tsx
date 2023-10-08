@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Route, Router, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import './App.css';
+import Day from './components/day';
+import { useState } from 'react';
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Day/>}/>
+  )
+)
 
 function App() {
+
+  const date = useState<Date>(new Date())
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div id="container">
+      <RouterProvider router={router}/>
     </div>
   );
 }

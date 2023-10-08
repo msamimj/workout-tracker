@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 200;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,59 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  background-color: #cfebf4;
+}
+
+#container {
+  width: 40vw;
+  height: 100vh;
+  background-color: #ebf6ff;
+}
+
+.day .header {
+  padding: 1vw;
+  background-color: #d6f2fb;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.day .header .name {
+  font-size: 1.5vw;
+  /* text-align: center; */
+}
+
+.workout-exercise {
+  cursor: pointer;
+}
+
+.workout-exercise > .name {
+  padding: 1vw;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.workout-exercise:hover {
+  background-color: #fff;
+}
+
+.workout-exercise:hover .name {
+  border-bottom: 1px solid #eee;
+}
+
+.workout-exercise .sets-and-reps {
+  padding: 1vw;
+}
+
+.workout-exercise .sets-and-reps .set {
+  display: flex;
+  column-gap: 1vw;
+  padding-bottom: 1vw;
+  /* grid-template-columns: auto auto auto; */
+}
+
+.workout-exercise .sets-and-reps .set:last-child {
+  padding-bottom: 0;
 }
